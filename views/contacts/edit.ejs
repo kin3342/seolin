@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body>
+    <% include ../partials/nav %>
+    <div class="contact contact-edit">
+      <div class="contact-menu">
+        <a href="/contacts<%= contact._id %>">back</a>
+      </div>
+      <h2>edit</h2>
+      <form class="contact-form" action="/contacts/<%= contact._id %>?_method=put" method="post">
+        <div>
+          <label for="name">name</label>
+          <input type="text" name="name" value="<%= contact.name %>">
+        </div>
+        <div>
+          <label for="name">email</label>
+          <input type="text" name="email" value="<%= contact.email %>">
+        </div>
+        <div>
+          <label for="name">phone</label>
+          <input type="text" name="phone" value="<%= contact.phone %>">
+        </div>
+        <div>
+          <button type="submit">submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
