@@ -2,6 +2,24 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="nowjs/now.js"></script>
+    <script>
+      function abspos(e){
+        this.x = e.clientX + (document.documentElement.scrollLeft?document.documentElement.scrollLeft:document.body.scrollLeft);
+        this.y = e.clientY + (document.documentElement.scrollTop?document.documentElement.scrollTop:document.body.scrollTop);
+        return this;
+      }
+
+      function button1_click(e){
+        var ex_obj = document.getElementById('mytoggle');
+        if(!e) e = window.Event;
+        pos = abspos(e);
+        ex_obj.style.left = pos.x+"px";
+        ex_obj.style.top = (pos.y+10)+"px";
+        ex_obj.style.display = ex_obj.style.display=='none'?'block':'none';
+      }
+    </script>
     <link rel="stylesheet" href="/css/master.css">
   </head>
   <body>
@@ -10,7 +28,12 @@
         <div id="body">
             <div id="container">Contents</div>
         </div>
-        <div id="footer">Footer</div>
+        <div id="footer">
+          <input class="button" type="button" onclick="button1_click(event);" value="레이어버튼" />
+          <div id="mytoggle" style="position:absolute; display:none; z-index:9999;">
+            테스트중이여
+          </div>
+        </div>
     </div>
   </body>
 </html>

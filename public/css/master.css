@@ -32,3 +32,45 @@ html, body {
     height:50px;
     background-color:#3C467D;
 }
+
+.button {
+  /* Fallback style */
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  color: white;
+  display: inline-block;
+  font: bold 1.5em 'Trebuchet MS', Arial, Helvetica, NanumGothic, '나눔고딕', 'Nanum Gothic', Dotum, '돋음';
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.4);
+  -webkit-border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
+  border-radius: 0.3em;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0px 0px 0.05em rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 0px 0.05em rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 0.05em rgba(0, 0, 0, 0.4);
+}
+.button:hover {
+  -webkit-box-shadow: 0px 0px 0.05em rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 0px 0.05em rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 0.05em rgba(0, 0, 0, 0.4);
+}
+.button:active {
+  /* When pressed, move it down 1px */
+  position: relative;
+  top: 1px;
+}
+
+.button.button-green {
+  background: #428739;
+  background-image: -moz-linear-gradient(top, #c8dd95, #428739);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#c8dd95), to(#428739));
+  background-image: -webkit-linear-gradient(top, #c8dd95, #428739);
+  background-image: -o-linear-gradient(top, #c8dd95, #428739);
+  background-image: linear-gradient(to bottom, #c8dd95, #428739);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c8dd95', endColorstr='#428739');
+}
